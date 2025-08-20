@@ -24,8 +24,7 @@ const App = () => (
           <HashRouter>
             <Header />
             <Routes>
-              <Route path="/" element={<BlogList />} />
-              <Route path="/home" element={<Index />} />
+              <Route path="/" element={<Index />} />
               <Route path="/blog" element={<BlogList />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/about" element={<About />} />

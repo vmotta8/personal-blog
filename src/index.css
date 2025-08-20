@@ -112,3 +112,48 @@ All colors MUST be HSL.
     @apply bg-secondary text-secondary-foreground p-4 overflow-x-auto border border-border;
   }
 }
+
+/* Retro utilities */
+@layer components {
+  /* CRT effect: scanlines + vignette overlay */
+  .crt {
+    position: relative;
+  }
+  /* Apply CRT overlay only in dark mode to avoid tinting on white */
+  .dark .crt::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    background:
+      /* scanlines */
+      repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.03) 0px,
+        rgba(255, 255, 255, 0.03) 1px,
+        rgba(255, 255, 255, 0.0) 2px
+      ),
+      /* vignette */
+      radial-gradient(ellipse at center,
+        rgba(0,0,0,0) 55%,
+        rgba(0,0,0,0.2) 100%);
+    mix-blend-mode: overlay;
+  }
+
+  /* Double-border retro card */
+  .retro-card {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    box-shadow:
+      inset 0 0 0 1px rgba(0,0,0,0.05),
+      2px 2px 0 0 rgba(0,0,0,0.08);
+  }
+
+  /* Blinking caret suffix for headings/lines */
+  .caret::after {
+    content: '▮';
+    display: inline-block;
+    margin-left: 0.25rem;
+    animation: blink-caret 1s step-end infinite;
+  }
+}

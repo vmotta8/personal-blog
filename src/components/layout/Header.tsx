@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { Menu, Sun, Moon, Github, Linkedin } from "lucide-react";
+import { Menu, Sun, Moon } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -27,53 +27,13 @@ const Header = () => {
             <NavLink to="/about" className={navLinkCls} end>
               ABOUT
             </NavLink>
-            <a
-              href="https://github.com/vmotta8"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="GitHub"
-              className="text-foreground/80 hover:text-foreground"
-              title="GitHub"
-            >
-              <Github className="h-4 w-4" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/vmotta8"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
-              className="text-foreground/80 hover:text-foreground"
-              title="LinkedIn"
-            >
-              <Linkedin className="h-4 w-4" />
-            </a>
             <ThemeToggle>
               <Sun className="h-4 w-4 dark:hidden" />
               <Moon className="h-4 w-4 hidden dark:block" />
             </ThemeToggle>
           </nav>
 
-          <div className="md:hidden flex items-center gap-3">
-            <a
-              href="https://github.com/vmotta8"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="GitHub"
-              className="text-foreground/80 hover:text-foreground"
-              title="GitHub"
-            >
-              <Github className="h-4 w-4" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/vmotta8"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
-              className="text-foreground/80 hover:text-foreground"
-              title="LinkedIn"
-            >
-              <Linkedin className="h-4 w-4" />
-            </a>
+          <div className="md:hidden flex items-center gap-2">
             <ThemeToggle>
               <Sun className="h-4 w-4 dark:hidden" />
               <Moon className="h-4 w-4 hidden dark:block" />

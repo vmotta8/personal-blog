@@ -31,7 +31,11 @@ const VideoComponent = ({ src, alt }: { src?: string; alt?: string }) => {
     );
   }
 
-  return <img src={src} alt={alt} />;
+  return (
+    <span className="block border border-border overflow-hidden h-64 sm:h-72 md:h-80">
+      <img src={src} alt={alt} className="w-full h-full object-cover object-center" />
+    </span>
+  );
 };
 
 const BlogPost = () => {
@@ -75,8 +79,13 @@ const BlogPost = () => {
         </p>
       </header>
 
-      <figure className="border border-border">
-        <img src={post.thumbnail} alt={`${post.title} hero image`} className="w-full" loading="lazy" />
+      <figure className="border border-border overflow-hidden">
+        <img
+          src={post.thumbnail}
+          alt={`${post.title} hero image`}
+          className="w-full h-64 sm:h-80 object-cover object-center"
+          loading="lazy"
+        />
       </figure>
 
       <article className="prose prose-sm dark:prose-invert max-w-none mt-8 

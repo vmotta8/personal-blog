@@ -10,7 +10,7 @@ const PostCard = ({ post }: Props) => {
   return (
     <article>
       <Link to={`/blog/${post.slug}`} className="block group">
-        <Card className="border bg-card">
+        <Card className="retro-card rounded-none shadow-none">
           <div className="aspect-video w-full overflow-hidden border-b border-border">
             <img
               src={post.thumbnail}
