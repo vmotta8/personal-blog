@@ -41,8 +41,8 @@ const BlogPost = () => {
   if (!post) {
     return (
       <main className="mx-auto max-w-3xl px-4 pb-16 pt-24">
-        <h1 className="text-3xl font-semibold uppercase tracking-wider">Post Not Found</h1>
-        <p className="mt-2 text-muted-foreground">The post you are looking for does not exist.</p>
+        <h1 className="text-2xl font-semibold uppercase tracking-wider">Post Not Found</h1>
+        <p className="mt-2 text-sm text-muted-foreground">The post you are looking for does not exist.</p>
         <div className="mt-6">
           <Button asChild variant="retro"><Link to="/blog">Back to Blog</Link></Button>
         </div>
@@ -69,7 +69,7 @@ const BlogPost = () => {
       </Helmet>
 
       <header className="mb-8">
-        <h1 className="text-3xl font-semibold tracking-tight uppercase">{post.title}</h1>
+        <h1 className="text-2xl font-semibold tracking-tight uppercase">{post.title}</h1>
         <p className="mt-2 text-xs text-muted-foreground uppercase tracking-wider">
           {new Date(post.date).toLocaleDateString()} • {post.readTime}
         </p>
@@ -79,7 +79,7 @@ const BlogPost = () => {
         <img src={post.thumbnail} alt={`${post.title} hero image`} className="w-full" loading="lazy" />
       </figure>
 
-      <article className="prose dark:prose-invert max-w-none mt-8 
+      <article className="prose prose-sm dark:prose-invert max-w-none mt-8 
                           dark:prose-headings:text-gray-100 
                           dark:prose-p:text-gray-200 
                           dark:prose-li:text-gray-200 

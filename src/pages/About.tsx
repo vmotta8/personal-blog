@@ -9,9 +9,9 @@ const About = () => {
         <link rel="canonical" href="/about" />
       </Helmet>
 
-      <h1 className="text-3xl font-semibold tracking-wider uppercase">About</h1>
-      <p className="mt-4 text-base leading-7">
-        I'm a software engineer who enjoys building scalable solutions and solving real problems with code. I like sharing what I learn, exploring new technologies, and collaborating on projects.
+      <h1 className="text-2xl font-semibold tracking-wider uppercase">About</h1>
+      <p className="mt-4 text-sm leading-6">
+        Software engineer who enjoys building scalable solutions and solving real problems with code. I like sharing what I learn, exploring new technologies, and collaborating on projects.
       </p>
     </main>
   );

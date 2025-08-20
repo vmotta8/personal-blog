@@ -20,7 +20,7 @@ const PostCard = ({ post }: Props) => {
             />
           </div>
           <div className="p-4">
-            <h3 className="text-lg font-medium group-hover:underline underline-offset-4">
+            <h3 className="text-base font-medium group-hover:underline underline-offset-4">
               {post.title}
             </h3>
             <p className="mt-2 text-sm text-muted-foreground line-clamp-2">{post.excerpt}</p>

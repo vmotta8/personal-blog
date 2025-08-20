@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { Menu, Sun, Moon } from "lucide-react";
+import { Menu, Sun, Moon, Github, Linkedin } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -16,27 +16,67 @@ const Header = () => {
     <header className="fixed top-0 inset-x-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b border-border">
       <div className="mx-auto max-w-3xl px-4">
         <div className="h-14 flex items-center justify-between">
-          <Link to="/" className="font-semibold uppercase tracking-wider">
+          <Link to="/" className="font-semibold uppercase tracking-wider text-sm">
             Vinicius Motta
           </Link>
 
-          <nav className="hidden md:flex items-center gap-6 text-sm">
+          <nav className="hidden md:flex items-center gap-5 text-xs">
             <NavLink to="/blog" className={navLinkCls} end>
               BLOG
             </NavLink>
             <NavLink to="/about" className={navLinkCls} end>
               ABOUT
             </NavLink>
+            <a
+              href="https://github.com/vmotta8"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+              className="text-foreground/80 hover:text-foreground"
+              title="GitHub"
+            >
+              <Github className="h-4 w-4" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/vmotta8"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+              className="text-foreground/80 hover:text-foreground"
+              title="LinkedIn"
+            >
+              <Linkedin className="h-4 w-4" />
+            </a>
             <ThemeToggle>
               <Sun className="h-4 w-4 dark:hidden" />
               <Moon className="h-4 w-4 hidden dark:block" />
             </ThemeToggle>
           </nav>
 
-          <div className="md:hidden flex items-center gap-2">
+          <div className="md:hidden flex items-center gap-3">
+            <a
+              href="https://github.com/vmotta8"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+              className="text-foreground/80 hover:text-foreground"
+              title="GitHub"
+            >
+              <Github className="h-4 w-4" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/vmotta8"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+              className="text-foreground/80 hover:text-foreground"
+              title="LinkedIn"
+            >
+              <Linkedin className="h-4 w-4" />
+            </a>
             <ThemeToggle>
-              <Sun className="h-5 w-5 dark:hidden" />
-              <Moon className="h-5 w-5 hidden dark:block" />
+              <Sun className="h-4 w-4 dark:hidden" />
+              <Moon className="h-4 w-4 hidden dark:block" />
             </ThemeToggle>
             <Sheet open={open} onOpenChange={setOpen}>
               <SheetTrigger asChild>
@@ -45,7 +85,7 @@ const Header = () => {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-64">
-                <div className="flex flex-col gap-4 mt-8">
+                <div className="flex flex-col gap-3 mt-8 text-sm">
                   <NavLink to="/blog" onClick={() => setOpen(false)} className={({isActive})=>`uppercase ${isActive? 'text-foreground':'text-foreground/80 hover:text-foreground'}`}>
                     BLOG
                   </NavLink>

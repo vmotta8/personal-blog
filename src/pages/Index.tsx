@@ -15,18 +15,17 @@ const Index = () => {
         <meta name="description" content="Personal Blog." />
         <link rel="canonical" href="/" />
       </Helmet>
-      <header className="pt-24 pb-12">
-        <div className="mx-auto max-w-3xl px-4 text-center">
-          <h1 className="text-4xl font-semibold tracking-tight">Hi, I'm Vinicius =]</h1>
-          <p className="mt-4 text-base text-muted-foreground max-w-2xl mx-auto">
-            I'm a software engineer who enjoys building scalable solutions and solving real problems with code. I like sharing what I learn, exploring new technologies, and collaborating on projects.
+      <header className="pt-32 pb-12">
+        <div className="mx-auto max-w-3xl px-4 text-left">
+          <p className="mt-0 text-sm text-muted-foreground max-w-2xl">
+            Software engineer who enjoys building scalable solutions and solving real problems with code. I like sharing what I learn, exploring new technologies, and collaborating on projects.
           </p>
-          <div className="mt-6 flex items-center justify-center gap-4">
+          <div className="mt-6 flex items-center justify-start gap-4">
             <a href="https://github.com/vmotta8" target="_blank" rel="noreferrer" aria-label="GitHub" className="hover:underline">
-              <Github className="h-5 w-5" />
+              <Github className="h-4 w-4" />
             </a>
             <a href="https://www.linkedin.com/in/vmotta8" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="hover:underline">
-              <Linkedin className="h-5 w-5" />
+              <Linkedin className="h-4 w-4" />
             </a>
           </div>
         </div>
@@ -34,7 +33,7 @@ const Index = () => {
 
       <main className="mx-auto max-w-3xl px-4 pb-24">
         <section>
-          <h2 className="text-2xl font-semibold uppercase tracking-wider">Latest Posts</h2>
+          <h2 className="text-xl font-semibold uppercase tracking-wider">Latest Posts</h2>
           <div className="mt-6 grid gap-6 sm:grid-cols-2">
             {latest.map((p) => (
               <PostCard key={p.slug} post={p} />

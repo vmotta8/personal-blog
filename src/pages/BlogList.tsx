@@ -44,8 +44,8 @@ const BlogList = () => {
         <link rel="canonical" href="/blog" />
       </Helmet>
 
-      <h1 className="text-3xl font-semibold tracking-wider uppercase">Latest Posts</h1>
-      <p className="mt-2 text-sm text-muted-foreground">Search and filter by tag.</p>
+      <h1 className="text-2xl font-semibold tracking-wider uppercase">Latest Posts</h1>
+      <p className="mt-2 text-xs text-muted-foreground">Search and filter by tag.</p>
 
       <div className="mt-6 grid gap-3 sm:grid-cols-[1fr_auto]">
         <Input
